@@ -3,16 +3,24 @@
  * It has a special length, amount of passenger and the next car in line.
  */
 public class Car {
-
+    /**
+     * Length of the Car
+     */
     private final int length;
+    /**
+     * Amount of passengers in the Car.
+     */
     private final int passenger;
+    /**
+     * Next Car after this in line.
+     */
     private Car next;
 
     /**
-     * Constructor that creates a car for a train.
+     * Constructor that creates a Car for a train.
      *
-     * @param length    - What length does the car has.
-     * @param passenger - How many passengers are in the car.
+     * @param length    - Length of the Car.
+     * @param passenger -Amount of passengers in the Car.
      */
     public Car(int length, int passenger) {
         this.length = length;
@@ -20,7 +28,7 @@ public class Car {
     }
 
     /**
-     * Getter for the length of the car.
+     * Getter for the length of the Car.
      *
      * @return - Returns an integer value of the length.
      */
@@ -31,7 +39,7 @@ public class Car {
     /**
      * Getter for the amount of passengers.
      *
-     * @return - Returns an integer value of how many passengers are in the car.
+     * @return - Returns an integer value of how many passengers are in the Car.
      */
     public int getPassenger() {
         return passenger;
@@ -47,7 +55,7 @@ public class Car {
     }
 
     /**
-     * Setter for setting the next car after this.
+     * Setter for setting the next Car after this.
      *
      * @param next - Next Car after this.
      */

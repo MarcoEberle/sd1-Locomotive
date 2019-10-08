@@ -3,18 +3,23 @@ import java.util.List;
 
 /**
  * This class represents a whole Train with its Locomotive and Cars.
- * Every train has a locomotive and a name.
+ * Every Train has a Locomotive and a name.
  */
 public class Train {
-
+    /**
+     * Locomotive of this Train.
+     */
     private final Locomotive locomotive;
+    /**
+     * Name of this Train.
+     */
     private final String name;
 
     /**
-     * Constructor to create a train.
+     * Constructor to create a Train.
      *
      * @param locomotive - Locomotive object.
-     * @param name       - Name of the train.
+     * @param name       - Name of the Train.
      */
     public Train(Locomotive locomotive, String name) {
         this.locomotive = locomotive;
@@ -22,11 +27,11 @@ public class Train {
     }
 
     /**
-     * Method to add another car to the train.
-     * If the first car is null it gets added directly. If there is another car, the while loop walks through the whole
-     * train until the end is reached.
+     * Method to add another Car to the Train.
+     * If the first Car is null it gets added directly. If there is another Car, the while loop walks through the whole
+     * Train until the end is reached.
      *
-     * @param car - Another car that gets added to the end of the train.
+     * @param car - Another Car that gets added to the end of the Train.
      */
     public void add(Car car) {
         Car nextCar = getLocomotive().getFirst();
@@ -42,7 +47,7 @@ public class Train {
     }
 
     /**
-     * Method to print a whole train and its information of passengers and weight.
+     * Method to print a whole Train and its information of passengers and weight.
      */
     public void print() {
         System.out.printf("Locomotive: type = %d, length = %dm%n", locomotive.getType(), locomotive.getLength());
@@ -56,10 +61,10 @@ public class Train {
     }
 
     /**
-     * Method that calculates the amount of passengers in the train.
-     * The while loop walks through the whole train and collects the information of each car.
+     * Method that calculates the amount of passengers in the Train.
+     * The while loop walks through the whole Train and collects the information of each Car.
      *
-     * @return - returns the amount of passengers.
+     * @return - Returns the amount of passengers.
      */
     public int getPassengers() {
         Car nextCar = getLocomotive().getFirst();
@@ -72,10 +77,10 @@ public class Train {
     }
 
     /**
-     * Method that calculates the length of the train.
-     * The while loop walks through the whole train and collects the information of each car.
+     * Method that calculates the length of the Train.
+     * The while loop walks through the whole Train and collects the information of each Car.
      *
-     * @return - returns the weight of the whole train, locomotive included.
+     * @return - Returns the weight of the whole Train, Locomotive included.
      */
     public int getLength() {
         Car nextCar = getLocomotive().getFirst();
@@ -88,9 +93,9 @@ public class Train {
     }
 
     /**
-     * Method that removes the first car and makes the second car first.
+     * Method that removes the first Car and makes the second Car first.
      *
-     * @return - returns the first car.
+     * @return - Returns the first Car.
      */
     public Car removeFirst() {
         final Car firstCar = getLocomotive().getFirst();
@@ -100,7 +105,7 @@ public class Train {
     }
 
     /**
-     * Method which relink the cars from another train to this train.
+     * Method which relink the Cars from another Train to this Train.
      *
      * @param train - Train to link off its cars to this train.
      */
@@ -110,10 +115,10 @@ public class Train {
     }
 
     /**
-     * Method that reverts all wagons that car Locomotive 1 2 3 4 5 will be Locomotive 5 4 3 2 1
-     * First while loop is adding all cars to the carList-
-     * Second loop is unbinding the references to the next car.
-     * Third loop is reverting all cars in the train.
+     * Method that reverts all Cars that Cars of Locomotive 1 2 3 4 5 will be Locomotive 5 4 3 2 1
+     * First while loop is adding all Cars to the carList-
+     * Second loop is unbinding the references to the next Car.
+     * Third loop is reverting all Cars in the train.
      */
     public void revert() {
         Car nextCar = getLocomotive().getFirst();
@@ -138,7 +143,7 @@ public class Train {
     }
 
     /**
-     * Getter for the locomotive.
+     * Getter for the Locomotive.
      *
      * @return - Returns the locomotive.
      */
@@ -147,7 +152,7 @@ public class Train {
     }
 
     /**
-     * Getter for the name of the locomotive.
+     * Getter for the name of the Locomotive.
      *
      * @return - Returns the name of the locomotive.
      */

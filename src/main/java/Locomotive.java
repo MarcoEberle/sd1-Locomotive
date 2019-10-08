@@ -1,11 +1,22 @@
 /**
- * This class represents a Locomotive with a special length, type (number), name and the first car (wagon) on it.
+ * This class represents a Locomotive with a special length, type (number), name and the first Car (wagon) on it.
  */
 public class Locomotive {
-
+    /**
+     * Length of the Locomotive.
+     */
     private final int length;
+    /**
+     * Serial number of the Locomotive.
+     */
     private final int type;
+    /**
+     * Name of the Locomotive.
+     */
     private final String name;
+    /**
+     * First Car after the Locomitve.
+     */
     private Car first;
 
     /**
