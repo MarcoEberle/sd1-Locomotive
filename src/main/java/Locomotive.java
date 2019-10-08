@@ -15,7 +15,7 @@ public class Locomotive {
      */
     private final String name;
     /**
-     * First Car after the Locomitve.
+     * First Car after the Locomotive.
      */
     private Car first;
 
